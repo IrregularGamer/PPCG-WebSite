@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JavaScript is running!"); // Debug log
 
+  // Smooth scroll for navigation
+  document.querySelectorAll("nav ul li a").forEach((anchor) => {
+    anchor.addEventListener("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        const hash = this.hash;
+        document.querySelector(hash).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // Welcome message logic
   if (!sessionStorage.getItem("welcomeMessageShown")) {
     const messageBox = document.getElementById("welcomeMessage");
 
@@ -29,4 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.log("Welcome message already shown this session.");
   }
+});
+
+// Initialize Slick Carousel
+
+$(document).ready(function () {
+  $(".testimonial-carousel").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+  });
 });
