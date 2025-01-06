@@ -35,9 +35,37 @@ footer {
   padding: 1rem 0;
   margin-top: 20px;
 }
-@media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
+
+/* Welcome message styles */
+#welcomeMessage {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  opacity: 0; /* Initially invisible */
+  transform: translateY(-20px); /* Slide up effect */
+  transition: all 0.5s ease; /* Smooth animation */
+  z-index: 9999;
+}
+
+/* Visible state */
+#welcomeMessage.show {
+  opacity: 1;
+  transform: translateY(0); /* Slide into view */
+}
+
+/* Updated Hidden Class */
+#welcomeMessage.hidden {
+  visibility: hidden;
+  opacity: 0; /* Fully transparent */
+}
+
+#welcomeMessage {
+  border: 2px solid rgb(36, 28, 28); /* Debug border */
 }
