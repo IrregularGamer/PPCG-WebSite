@@ -43,11 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.log("Welcome message already shown this session.");
   }
-});
 
-// Initialize Slick Carousel
-
-$(document).ready(function () {
+  // Initialize Slick Carousel
   $(".testimonial-carousel").slick({
     dots: true,
     infinite: true,
@@ -55,4 +52,44 @@ $(document).ready(function () {
     slidesToShow: 1,
     adaptiveHeight: true,
   });
+
+  // Contact Form submission logic
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent default form submission
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
+
+      console.log("Submitting form data:", formData); // Debug log
+
+      try {
+        const response = await fetch("http://localhost:3000/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        console.log("Response received:", response); // Debug log
+
+        if (response.ok) {
+          console.log(
+            "Submission successful, redirecting to confirmation page."
+          );
+          window.location.href = "confirmation.html"; // Redirect to confirmation page
+        } else {
+          console.error("Error:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    });
+  } else {
+    console.error("Contact form not found!");
+  }
 });
