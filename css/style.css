@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url("../assets/images/building.jpg") no-repeat center center fixed;
+  background: url("../assets/images/skyscraper.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
   display: flex;
@@ -134,9 +134,38 @@ h2 {
 
 /* Mission section styles */
 .mission {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   padding: 2rem 0;
   text-align: center;
+}
+
+.mission-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.mission-box:hover {
+  transform: scale(1.05);
+}
+
+.mission-image {
+  flex: 1;
+  background: url("../assets/images/singapore.jpg") no-repeat center center;
+  background-size: cover;
+  height: 200px;
+  border-radius: 10px 0 0 10px;
+}
+
+.mission-text {
+  flex: 2;
+  padding: 1rem;
 }
 
 .mission h2 {
@@ -151,14 +180,16 @@ h2 {
 
 /* Testimonial section styles */
 .testimonials {
-  background-color: rgba(249, 249, 249, 0.9); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
   padding: 2rem 0;
   text-align: center;
+  color: #fff;
 }
 
 .testimonials h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .testimonial-carousel {
@@ -168,10 +199,9 @@ h2 {
 }
 
 .testimonial {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 1rem;
   transition: transform 0.3s ease;
 }
@@ -182,7 +212,7 @@ h2 {
 
 .testimonial p {
   font-size: 1.1rem;
-  color: #555;
+  color: #fff;
 }
 
 .testimonial::before {
