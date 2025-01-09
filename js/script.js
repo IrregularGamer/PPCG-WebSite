@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 300,
     slidesToShow: 1,
     adaptiveHeight: true,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
   });
 
   // Contact Form submission logic
@@ -87,6 +90,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } catch (error) {
         console.error("Error:", error);
+      }
+    });
+
+    // Inline validation for email
+    contactForm.addEventListener("submit", function (e) {
+      const email = document.querySelector("input[type='email']");
+      if (!email.value.includes("@")) {
+        alert("Please enter a valid email address.");
+        e.preventDefault();
       }
     });
   } else {
