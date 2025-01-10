@@ -26,7 +26,11 @@
     <main>
       <section>
         <h2>Get in Touch</h2>
-        <form id="contactForm">
+        <!-- FormSubmit Integration for Email -->
+        <form
+          action="https://formsubmit.co/support@primperfection.org"
+          method="POST"
+        >
           <label for="name">Name:</label>
           <input
             type="text"
@@ -52,7 +56,17 @@
             required
           ></textarea>
           <button type="submit">Send Message</button>
+          <!-- Hidden Input for Security -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
         </form>
+        <p>
+          Note: Your message will be sent directly to our email. If you
+          encounter issues, please contact us at
+          <a href="mailto:support@primperfection.org"
+            >support@primperfection.org</a
+          >
+        </p>
       </section>
     </main>
     <footer>
