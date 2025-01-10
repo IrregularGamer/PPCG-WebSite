@@ -459,31 +459,103 @@ h2 {
   }
 }
 
+/* General styles remain unchanged */
+
+/* Media Query for Small Screens (max-width: 768px) */
 @media (max-width: 768px) {
+  /* Adjust navigation bar for mobile */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
   nav ul li {
-    display: block;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
+  /* Adjust hero section for mobile */
   .hero {
     height: auto;
     padding: 2rem 1rem;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller heading size for mobile */
   }
 
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Smaller paragraph size for mobile */
   }
 
   .hero button {
+    font-size: 1rem; /* Smaller button size */
+  }
+
+  /* Adjust services grid layout for mobile */
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem; /* Reduce gap for tighter layout */
+  }
+
+  /* Adjust form for mobile */
+  form {
+    width: 90%; /* Take most of the screen width */
+    margin: 1rem auto;
+  }
+
+  /* Adjust policy section for mobile */
+  .policy-section {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  /* Adjust footer for mobile */
+  footer ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+  }
+
+  /* Adjust testimonials for mobile */
+  .testimonial-carousel {
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  .testimonial {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Media Query for Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Further reduce hero section text */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
     font-size: 1rem;
+  }
+
+  .hero button {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Adjust testimonial text size */
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  /* Adjust footer text for small screens */
+  footer p {
+    font-size: 0.9rem;
   }
 }
 
