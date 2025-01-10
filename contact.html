@@ -119,25 +119,5 @@
       </ul>
     </footer>
     <script src="js/script.js"></script>
-    <script>
-      // Fetch IP and location data using IPInfo API
-      fetch("https://ipinfo.io/json?token=5c4da5a648c6e2")
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.ip) {
-            document.getElementById("ip").value = data.ip;
-          }
-          if (data.city && data.region && data.country) {
-            document.getElementById(
-              "location"
-            ).value = `${data.city}, ${data.region}, ${data.country}`;
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching IP info:", error);
-          document.getElementById("ip").value = "Unavailable";
-          document.getElementById("location").value = "Unavailable";
-        });
-    </script>
   </body>
 </html>
