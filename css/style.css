@@ -278,7 +278,7 @@ footer ul li a:hover {
 .slick-slide {
   text-align: center; /* Center-align testimonials */
   padding: 0 15px; /* Add some horizontal padding */
-  width: 500px; /* Increased width */
+  width: 85%; /* Increased width */
 }
 
 .testimonial {
