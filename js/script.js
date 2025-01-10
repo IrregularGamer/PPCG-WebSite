@@ -50,11 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
   if ($(".testimonial-carousel").length) {
     console.log("Initializing the Slick carousel...");
     $(".testimonial-carousel").slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      adaptiveHeight: true,
+      infinite: true, // Enable infinite scrolling
+      slidesToShow: 1, // Show one testimonial at a time
+      slidesToScroll: 1, // Scroll one testimonial at a time
+      autoplay: true, // Enable autoplay
+      autoplaySpeed: 3000, // Set autoplay speed to 3 seconds
+      dots: true, // Enable dots navigation
+      arrows: false, // Disable arrows
+      draggable: true, // Allow mouse dragging
+      swipe: true, // Enable swipe for touch devices
+      touchThreshold: 10, // Adjust swipe sensitivity
+      adaptiveHeight: true, // Adjust height dynamically based on content
     });
   } else {
     console.warn("Slick carousel element not found!");

@@ -59,13 +59,14 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <h2>Get in Touch</h2>
+    <main class="contact-background">
+      <section class="contact-section">
+        <h2 class="center-text">Get in Touch</h2>
         <!-- FormSubmit Integration for Email -->
         <form
           action="https://formsubmit.co/support@primperfection.org"
           method="POST"
+          target="_blank"
         >
           <label for="name">Name:</label>
           <input
@@ -95,6 +96,7 @@
           <!-- Hidden Input for Security -->
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="confirmation.html" />
         </form>
         <p class="contact-note">
           Note: Your message will be sent directly to our email. If you

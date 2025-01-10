@@ -1,88 +1,595 @@
 /* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif; /* Updated to a modern font */
   margin: 0;
   padding: 0;
-  background: url("../assets/images/skyscraper.jpg") no-repeat center center
-    fixed;
-  background-size: cover;
+  background: #f4f4f9; /* Lightened background for reduced strain */
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  line-height: 1.6; /* Improved readability */
 }
 
+/* Header styles */
 header {
-  background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent background */
+  background: linear-gradient(
+    45deg,
+    #333,
+    #007bff
+  ); /* Gradient for a modern look */
   color: #fff;
   padding: 1rem 0;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff6347; /* Change to your desired hover color */
-  text-decoration: underline;
+  color: #ffdd57; /* Highlight hover effect */
+  text-shadow: 0 0 5px #ffdd57;
 }
 
-button:hover,
-.btn:hover {
-  background-color: #ff6347; /* Change to your desired hover color */
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("../assets/images/skyscraper.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
   color: #fff;
-  transform: scale(1.05);
+  height: 100vh;
+  padding: 2rem;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1,
+.hero p,
+.hero button {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer styles */
 footer {
-  background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent background */
+  background: linear-gradient(45deg, #333, #007bff); /* Gradient background */
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0; /* Increased padding for better spacing */
   margin-top: auto;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
   margin: 0;
-  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 footer ul {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin: 1rem 0 0 0;
 }
 
 footer ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 footer ul li a {
-  color: #fff;
+  color: #ffdd57;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 footer ul li a:hover {
-  color: #ff6347; /* Change to your desired hover color */
+  color: #fff;
+  text-shadow: 0 0 5px #ffdd57;
+}
+
+/* Media queries for responsiveness */
+/* Adjust navigation, hero, and footer for mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mission section styles */
+.mission {
+  padding: 3rem 1rem; /* Increased padding for better spacing */
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for contrast */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle depth */
+}
+
+.mission-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mission-image {
+  flex: 1;
+  background: url("../assets/images/singapore.jpg") no-repeat center center;
+  background-size: cover;
+  height: 200px;
+  border-radius: 10px 0 0 10px;
+}
+
+.mission-text {
+  flex: 2;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.mission-text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+/* General Testimonials Section */
+.testimonials {
+  background: #f4f4f9;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid #007bff;
+  overflow: hidden;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel {
+  position: relative;
+  overflow: visible; /* Prevent hover effects from overflowing */
+  max-width: 900px; /* Increased width */
+  margin: 0 auto; /* Center carousel on the page */
+  padding: 0 40px; /* Add padding to prevent clipping */
+}
+
+.slick-list {
+  overflow: auto; /* Prevent slides from overflowing */
+  width: 900px; /* Increased width */
+  margin: 0 auto; /* Center carousel on the page */
+  padding: 0 40px; /* Increased padding to prevent clipping */
+}
+
+.slick-slide {
+  text-align: center; /* Center-align testimonials */
+  padding: 0 15px; /* Add some horizontal padding */
+  width: 500px; /* Increased width */
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem; /* Increased padding */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: 1rem auto; /* Increased margin */
+  max-width: 900px; /* Increased width */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1.1rem; /* Slightly larger text for better readability */
+  height: 200px; /* Increased height */
+}
+
+.testimonial:hover {
+  transform: scale(1.02); /* Slight hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Content */
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 0.9rem;
+}
+
+/* Dots Navigation */
+.slick-dots {
+  display: block !important; /* Ensure dots are visible */
+  text-align: center; /* Center-align the dots */
+  margin-top: 1.5rem; /* Add some spacing above the dots */
+}
+
+.slick-dots li {
+  display: inline-block; /* Ensure dots are in a line */
+  margin: 0 5px; /* Add some spacing between dots */
+}
+
+.slick-dots li button {
+  background: #ddd; /* Default dot color */
+  width: 12px; /* Slightly larger dots */
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+}
+
+.slick-dots li.slick-active button {
+  background: #007bff; /* Highlight active dot */
+}
+
+/* Form styles */
+form {
+  max-width: 900px; /* Increased width for a more spacious layout */
+  margin: 2rem auto;
+  padding: 3rem; /* Increased padding for better spacing */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  background-image: image("../assets/images/singapore.jpg");
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: none;
+}
+
+form button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Contact note styles */
+.contact-note {
+  max-width: 700px;
+  margin: 2rem auto;
+  font-size: 0.9rem;
+  color: #555;
+  background: #f9f9f9;
+  padding: 0.75rem;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+}
+
+.contact-note a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-note a:hover {
   text-decoration: underline;
+}
+
+/* Services Section */
+.services-section {
+  background-color: #f9f9f9; /* Subtle background for readability */
+  padding: 3rem 1rem;
+  margin: 1rem auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-section {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-section ul li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.about-section ul li strong {
+  color: #007bff;
+}
+
+/* Confirmation Page */
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.confirmation-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.confirmation-container .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.confirmation-container .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Policies Section */
+.policy-section {
+  background: #ffffff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.policy-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Policy Links */
+.policy-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.policy-section a:hover {
+  text-decoration: underline;
+}
+
+/* Adjustments for Mobile Views */
+/* Small Screens (Phones) */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .about-section {
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  .policy-section {
+    padding: 1rem; /* Adjust spacing */
+  }
 }
 
 /* Welcome message styles */
@@ -115,467 +622,24 @@ footer ul li a:hover {
   opacity: 0; /* Fully transparent */
 }
 
-/* Form styles */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #222;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #555;
-}
-
-/* Styling for the Get in Touch heading */
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-/* Styling for the contact note */
-.contact-note {
-  max-width: 600px;
-  margin: 1rem auto 0;
-  font-size: 0.9rem;
-  color: #555;
-  background-color: #f9f9f9;
-  padding: 0.5rem;
-  border-left: 4px solid #007bff;
-  border-radius: 5px;
-}
-
-.contact-note a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-note a:hover {
-  text-decoration: underline;
-}
-
-/* Mission section styles */
-.mission {
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.mission-box {
+/* Contact section */
+.contact-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto;
-  max-width: 800px;
-  transition: transform 0.3s ease;
+  text-align: left;
+  padding: 2rem;
 }
 
-.mission-box:hover {
-  transform: scale(1.05);
+/* Center text */
+.center-text {
+  text-align: center;
 }
 
-.mission-image {
-  flex: 1;
-  background: url("../assets/images/singapore.jpg") no-repeat center center;
+/* Contact page background */
+.contact-background {
+  background: url("../assets/images/singapore.jpg") no-repeat center center
+    fixed;
   background-size: cover;
-  height: 200px;
-  border-radius: 10px 0 0 10px;
-}
-
-.mission-text {
-  flex: 2;
-  padding: 1rem;
-}
-
-.mission h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.mission p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Testimonials section styles */
-.testimonials {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   padding: 2rem;
-  margin: 1rem auto;
-  max-width: 1200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.testimonial-carousel {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.testimonial {
-  position: relative;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.testimonial:hover {
-  transform: scale(1.05);
-}
-
-.testimonial p {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.testimonial::before {
-  content: "“";
-  font-size: 3rem;
-  color: #ff6347;
-  vertical-align: top;
-}
-
-.testimonial::after {
-  content: "”";
-  font-size: 3rem;
-  color: #ff6347;
-  vertical-align: bottom;
-}
-
-/* Confirmation page styles */
-.confirmation-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.confirmation-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.confirmation-container p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.confirmation-container .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #222;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  margin-top: 1rem;
-}
-
-.confirmation-container .btn:hover {
-  background-color: #555;
-}
-
-/* About page styles */
-.about-section {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.about-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about-section ul li {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}
-
-.about-section ul li strong {
-  color: #333;
-}
-
-/* Services page styles */
-.services-section {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 1200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.services-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.service {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.service h3 {
-  color: #007bff;
-  margin-bottom: 1rem;
-}
-
-.service p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Hero section styles */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  height: 100vh;
-  position: relative;
-}
-
-.hero-content {
-  opacity: 0; /* Start with opacity 0 */
-  transform: translateY(50px); /* Start with a slight downward position */
-  animation: flyIn 1s ease-out forwards; /* Animation */
-}
-
-.hero h1 {
-  font-size: 3rem; /* Increased font size */
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.5rem; /* Increased font size */
-  margin-bottom: 1.5rem;
-}
-
-.hero button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1.2rem; /* Increased font size */
-}
-
-.hero button:hover {
-  background-color: #0056b3;
-}
-
-@keyframes flyIn {
-  to {
-    opacity: 1; /* End with opacity 1 */
-    transform: translateY(0); /* End with the original position */
-  }
-}
-
-/* General styles remain unchanged */
-
-/* Media Query for Small Screens (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Adjust navigation bar for mobile */
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  /* Adjust hero section for mobile */
-  .hero {
-    height: auto;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem; /* Smaller heading size for mobile */
-  }
-
-  .hero p {
-    font-size: 1.2rem; /* Smaller paragraph size for mobile */
-  }
-
-  .hero button {
-    font-size: 1rem; /* Smaller button size */
-  }
-
-  /* Adjust services grid layout for mobile */
-  .services-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1rem; /* Reduce gap for tighter layout */
-  }
-
-  /* Adjust form for mobile */
-  form {
-    width: 90%; /* Take most of the screen width */
-    margin: 1rem auto;
-  }
-
-  /* Adjust policy section for mobile */
-  .policy-section {
-    width: 90%;
-    margin: 1rem auto;
-    padding: 1rem;
-  }
-
-  /* Adjust footer for mobile */
-  footer ul {
-    flex-direction: column; /* Stack links vertically */
-    align-items: center;
-  }
-
-  footer ul li {
-    margin: 5px 0;
-  }
-
-  /* Adjust testimonials for mobile */
-  .testimonial-carousel {
-    padding: 0.5rem; /* Reduce padding */
-  }
-
-  .testimonial {
-    margin-bottom: 1rem;
-  }
-}
-
-/* Media Query for Extra Small Screens (max-width: 480px) */
-@media (max-width: 480px) {
-  /* Further reduce hero section text */
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero button {
-    padding: 0.5rem 1rem;
-  }
-
-  /* Adjust testimonial text size */
-  .testimonial p {
-    font-size: 1rem;
-  }
-
-  /* Adjust footer text for small screens */
-  footer p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Policy section styles */
-.policy-section {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.policy-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.policy-section p {
-  font-size: 1.2rem;
-  color: #555;
 }
