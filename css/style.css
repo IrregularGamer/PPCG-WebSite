@@ -269,8 +269,8 @@ footer ul li a:hover {
 }
 
 .slick-list {
-  overflow: auto; /* Prevent slides from overflowing */
-  width: 900px; /* Increased width */
+  /*overflow: auto; /* Prevent slides from overflowing */
+  width: 90%; /* Increased width */
   margin: 0 auto; /* Center carousel on the page */
   padding: 0 40px; /* Increased padding to prevent clipping */
 }
@@ -289,7 +289,8 @@ footer ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   margin: 1rem auto; /* Increased margin */
-  max-width: 900px; /* Increased width */
+  max-width: 1200px; /* Increased width */
+  width: 90%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-size: 1.1rem; /* Slightly larger text for better readability */
   height: 200px; /* Increased height */
