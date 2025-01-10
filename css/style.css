@@ -246,11 +246,16 @@ footer ul li a:hover {
 }
 /* General Testimonials Section */
 .testimonials {
+  overflow: visible;
   background: #f4f4f9;
   padding: 3rem 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
   border-top: 1px solid #007bff;
-  overflow: hidden;
 }
 
 .testimonials h2 {
@@ -262,42 +267,41 @@ footer ul li a:hover {
 /* Testimonial Carousel */
 .testimonial-carousel {
   position: relative;
-  overflow: visible; /* Prevent hover effects from overflowing */
-  max-width: 900px; /* Increased width */
+  width: 90%;
   margin: 0 auto; /* Center carousel on the page */
-  padding: 0 40px; /* Add padding to prevent clipping */
+  padding: 0px; /* Add padding to prevent clipping */
 }
 
 .slick-list {
   /*overflow: auto; /* Prevent slides from overflowing */
   width: 90%; /* Increased width */
   margin: 0 auto; /* Center carousel on the page */
-  padding: 0 40px; /* Increased padding to prevent clipping */
+  padding: 0px 0px; /* Increased padding to prevent clipping */
 }
 
 .slick-slide {
   text-align: center; /* Center-align testimonials */
+  margin: 0 auto;
   padding: 0 15px; /* Add some horizontal padding */
-  width: 85%; /* Increased width */
+  width: 100%; /* Increased width */
 }
 
 .testimonial {
-  background: #fff;
+  background: #333;
   border: 1px solid #ddd;
   padding: 2rem; /* Increased padding */
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  text-align: center;
   margin: 1rem auto; /* Increased margin */
-  max-width: 1200px; /* Increased width */
-  width: 90%;
+  width: 100%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-size: 1.1rem; /* Slightly larger text for better readability */
-  height: 200px; /* Increased height */
+  max-height: 350px; /* Increased height */
 }
 
 .testimonial:hover {
-  transform: scale(1.02); /* Slight hover effect */
+  transform: scale(1.01); /* Slight hover effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
