@@ -9,21 +9,7 @@
       content="PrimPerfection - Empowering businesses through digital excellence."
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
-    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
-    ></script>
   </head>
   <body>
     <header>
@@ -83,5 +69,56 @@
       </ul>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              message: document.getElementById("message").value,
+            };
+
+            console.log("Submitting form data:", formData); // Debug log
+
+            try {
+              const response = await fetch("http://localhost:3000/submit", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              });
+
+              console.log("Response received:", response); // Debug log
+
+              if (response.ok) {
+                console.log(
+                  "Submission successful, redirecting to confirmation page."
+                );
+                window.location.href = "confirmation.html"; // Redirect to confirmation page
+              } else {
+                console.error("Error:", response.statusText);
+              }
+            } catch (error) {
+              console.error("Error:", error);
+            }
+          });
+
+          // Inline validation for email
+          contactForm.addEventListener("submit", function (e) {
+            const email = document.querySelector("input[type='email']");
+            if (!email.value.includes("@")) {
+              alert("Please enter a valid email address.");
+              e.preventDefault();
+            }
+          });
+        } else {
+          console.error("Contact form not found!");
+        }
+      });
+    </script>
   </body>
 </html>

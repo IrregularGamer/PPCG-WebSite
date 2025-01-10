@@ -1,3 +1,5 @@
+// Wait for the DOM to fully load
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("JavaScript is running!"); // Debug log
 
@@ -45,63 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Initialize Slick Carousel
-  $(".testimonial-carousel").slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  });
-
-  // Contact Form submission logic
-  const contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", async function (event) {
-      event.preventDefault(); // Prevent default form submission
-      const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-      };
-
-      console.log("Submitting form data:", formData); // Debug log
-
-      try {
-        const response = await fetch("http://localhost:3000/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        console.log("Response received:", response); // Debug log
-
-        if (response.ok) {
-          console.log(
-            "Submission successful, redirecting to confirmation page."
-          );
-          window.location.href = "confirmation.html"; // Redirect to confirmation page
-        } else {
-          console.error("Error:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    });
-
-    // Inline validation for email
-    contactForm.addEventListener("submit", function (e) {
-      const email = document.querySelector("input[type='email']");
-      if (!email.value.includes("@")) {
-        alert("Please enter a valid email address.");
-        e.preventDefault();
-      }
+  if ($(".testimonial-carousel").length) {
+    console.log("Initializing the Slick carousel...");
+    $(".testimonial-carousel").slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true,
     });
   } else {
-    console.error("Contact form not found!");
+    console.warn("Slick carousel element not found!");
   }
 });

@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - PrimPerfection</title>
+    <title>PrimPerfection</title>
     <meta
       name="description"
       content="PrimPerfection - Empowering businesses through digital excellence."
     />
-
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -20,6 +19,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
@@ -40,34 +40,20 @@
     </header>
     <main>
       <section class="hero">
-        <div class="hero-content">
-          <h1>Transform Your Digital Presence</h1>
-          <p>Discover innovative strategies tailored for your success.</p>
-          <button onclick="location.href='services.html'">
-            Explore Services
-          </button>
-        </div>
+        <h1>Transform Your Digital Presence</h1>
+        <p>Discover innovative strategies tailored for your success.</p>
+        <button onclick="location.href='services.html'">
+          Explore Services
+        </button>
       </section>
-    </main>
-    <main>
       <section class="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-carousel">
           <div class="testimonial">
-            <img
-              src="assets/images/client-a.jpg"
-              alt="Client A"
-              class="testimonial-img"
-            />
-            <p>"Great service and support!" - Client A</p>
+            <p>“Great service and support!” - Client A</p>
           </div>
           <div class="testimonial">
-            <img
-              src="assets/images/client-b.jpg"
-              alt="Client B"
-              class="testimonial-img"
-            />
-            <p>"Highly recommend PrimPerfection!" - Client B</p>
+            <p>“Highly recommend PrimPerfection!” - Client B</p>
           </div>
           <!-- Add more testimonials as needed -->
         </div>
@@ -86,39 +72,6 @@
         <li><a href="cookie-policy.html">Cookie Policy</a></li>
       </ul>
     </footer>
-    <!-- Include jQuery before custom scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
-    ></script>
     <script src="js/script.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("nav ul li a").on("click", function (event) {
-          if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                window.location.hash = hash;
-              }
-            );
-          }
-        });
-
-        $(".testimonial-carousel").slick({
-          dots: true,
-          infinite: true,
-          speed: 300,
-          slidesToShow: 1,
-          adaptiveHeight: true,
-        });
-      });
-    </script>
   </body>
 </html>
