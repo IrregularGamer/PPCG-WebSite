@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
+/* Hide scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for WebKit browsers */
+  display: none;
 }
 
 /* General styles */
@@ -20,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: auto; /* Restore default scrollbar behavior */
+  overflow: auto;
 }
 
 /* Header styles */
@@ -56,8 +57,7 @@ nav ul li a:hover {
 
 /* Hero section */
 .hero {
-  background: url("../assets/images/skyscraper.jpg") no-repeat center
-    center/cover;
+  background: url("../assets/images/skyscraper.jpg") no-repeat center center/cover;
   color: #fff;
   height: 70vh;
   display: flex;
@@ -94,23 +94,12 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Footer styles */
 footer {
   background-color: #004080;
   color: #fff;
   text-align: center;
-  padding: 2rem 0; /* Increased padding for better spacing */
+  padding: 2rem 0;
   margin-top: auto;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -145,168 +134,12 @@ footer ul li a:hover {
   text-shadow: 0 0 5px #ffdd57;
 }
 
-/* Media queries for responsiveness */
-/* Adjust navigation, hero, and footer for mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  footer ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  footer ul li {
-    margin: 10px 0;
-  }
-}
-
-/* Small screens (phones) */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  footer p {
-    font-size: 0.9rem;
-  }
-
-  .mission-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .mission-image {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px 10px 0 0;
-  }
-
-  .mission-text {
-    padding: 1rem;
-  }
-
-  .testimonial-carousel {
-    padding: 1rem;
-  }
-
-  .testimonial {
-    margin: 1rem 0;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-section {
-    padding: 1.5rem;
-  }
-
-  .policy-section {
-    padding: 1rem;
-  }
-
-  .contact-section {
-    padding: 1rem;
-  }
-
-  .contact-section h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Extra small screens (very small phones) */
-@media (max-width: 320px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.8rem;
-  }
-
-  footer p {
-    font-size: 0.8rem;
-  }
-
-  .mission-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .mission-text p {
-    font-size: 1rem;
-  }
-
-  .testimonial p {
-    font-size: 1rem;
-  }
-
-  .testimonial span {
-    font-size: 0.9rem;
-  }
-
-  .services-section h2 {
-    font-size: 2rem;
-  }
-
-  .service h3 {
-    font-size: 1.2rem;
-  }
-
-  .service p {
-    font-size: 0.9rem;
-  }
-
-  .about-section h2 {
-    font-size: 2rem;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 1rem;
-  }
-
-  .policy-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .policy-section p {
-    font-size: 1rem;
-  }
-
-  .contact-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact-section p {
-    font-size: 1rem;
-  }
-}
-
 /* Mission section styles */
 .mission {
-  padding: 3rem 1rem; /* Increased padding for better spacing */
+  padding: 3rem 1rem;
   text-align: center;
-  background-color: #f9f9f9; /* Light background for contrast */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle depth */
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .mission-box {
@@ -429,15 +262,15 @@ footer ul li a:hover {
 
 /* Form styles */
 form {
-  max-width: 900px; /* Increased width for a more spacious layout */
+  max-width: 900px;
   margin: 2rem auto;
-  padding: 3rem; /* Increased padding for better spacing */
+  padding: 3rem;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
-  width: 100%; /* Ensure the form takes full width */
-  margin-bottom: 2rem; /* Add space below the form */
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 form label {
@@ -488,9 +321,9 @@ form button:hover {
   padding: 0.75rem;
   border-left: 5px solid #007bff;
   border-radius: 5px;
-  width: 100%; /* Ensure the note takes full width */
-  text-align: center; /* Center-align the note text */
-  font-size: 1rem; /* Adjust font size for better readability */
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .contact-note a {
@@ -504,7 +337,7 @@ form button:hover {
 
 /* Services Section */
 .services-section {
-  background-color: #f9f9f9; /* Subtle background for readability */
+  background-color: #f9f9f9;
   padding: 3rem 1rem;
   margin: 1rem auto;
   max-width: 1200px;
@@ -657,7 +490,6 @@ form button:hover {
   line-height: 1.8;
 }
 
-/* Policy Links */
 .policy-section a {
   color: #007bff;
   text-decoration: none;
@@ -666,22 +498,6 @@ form button:hover {
 
 .policy-section a:hover {
   text-decoration: underline;
-}
-
-/* Adjustments for Mobile Views */
-/* Small Screens (Phones) */
-@media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr; /* Single column layout */
-  }
-
-  .about-section {
-    padding: 1.5rem; /* Reduce padding */
-  }
-
-  .policy-section {
-    padding: 1rem; /* Adjust spacing */
-  }
 }
 
 /* Welcome message styles */
@@ -696,22 +512,20 @@ form button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 16px;
   font-family: Arial, sans-serif;
-  opacity: 0; /* Initially invisible */
-  transform: translateY(-20px); /* Slide up effect */
-  transition: all 0.5s ease; /* Smooth animation */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
   z-index: 9999;
 }
 
-/* Visible state */
 #welcomeMessage.show {
   opacity: 1;
-  transform: translateY(0); /* Slide into view */
+  transform: translateY(0);
 }
 
-/* Updated Hidden Class */
 #welcomeMessage.hidden {
   visibility: hidden;
-  opacity: 0; /* Fully transparent */
+  opacity: 0;
 }
 
 /* Contact section */
@@ -721,8 +535,19 @@ form button:hover {
   align-items: center;
   text-align: left;
   padding: 2rem;
-  max-width: 600px; /* Reduced width of the contact section */
-  margin: 0 auto; /* Center the contact section */
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 /* Center text */
@@ -732,18 +557,166 @@ form button:hover {
 
 /* Contact page background */
 .contact-background {
-  background: url("../assets/images/singapore.jpg") no-repeat center center
-    fixed;
+  background: url("../assets/images/singapore.jpg") no-repeat center center fixed;
   background-size: cover;
   padding: 2rem;
+  width: 100%;
+  height: auto;
 }
 
-.contact-section h2 {
-  font-size: 2.5rem; /* Increased font size */
-  color: #007bff; /* Changed color */
-  margin-bottom: 1.5rem; /* Added margin */
-  text-align: center; /* Center-align text */
-  text-transform: uppercase; /* Uppercase text */
-  letter-spacing: 1px; /* Added letter spacing */
-  font-weight: bold; /* Bold text */
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer ul li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  .mission-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .mission-text {
+    padding: 1rem;
+  }
+
+  .testimonial-carousel {
+    padding: 1rem;
+  }
+
+  .testimonial {
+    margin: 1rem 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  .policy-section {
+    padding: 1rem;
+  }
+
+  .contact-section {
+    padding: 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-background {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+
+  .mission-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission-text p {
+    font-size: 1rem;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonial span {
+    font-size: 0.9rem;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+  }
+
+  .service h3 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 1rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-section p {
+    font-size: 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
 }
