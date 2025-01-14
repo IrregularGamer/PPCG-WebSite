@@ -57,11 +57,29 @@
     <header>
       <h1>Welcome to PrimPerfection</h1>
       <nav class="main-nav">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">About</a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">Our Story</a></li>
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="mission.html">Mission & Vision</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="cleaning.html">Cleaning</a></li>
+              <li><a href="maintenance.html">Maintenance</a></li>
+              <li><a href="repairs.html">Repairs</a></li>
+            </ul>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle">Policies</a>
             <ul class="dropdown-menu">
@@ -71,6 +89,7 @@
               <li><a href="cookie-policy.html">Cookie Policy</a></li>
             </ul>
           </li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
