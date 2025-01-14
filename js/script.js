@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         adaptiveHeight: true, // Adjust height based on content
       });
     });
-    
   } else {
     console.warn("Slick carousel element not found!");
   }
