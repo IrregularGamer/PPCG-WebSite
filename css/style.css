@@ -244,102 +244,78 @@ footer ul li a:hover {
   color: #555;
   line-height: 1.8;
 }
-/* General Testimonials Section */
+
+/* Testimonials Section */
 .testimonials {
-  overflow: visible;
-  background: #f4f4f9;
+  background: #f9f9f9;
   padding: 3rem 1rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid #007bff;
+  border-top: 5px solid #007bff;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
   color: #333;
+  margin-bottom: 2rem;
 }
 
-/* Testimonial Carousel */
 .testimonial-carousel {
-  position: relative;
-  width: 90%;
-  margin: 0 auto; /* Center carousel on the page */
-  padding: 0px; /* Add padding to prevent clipping */
-}
-
-.slick-list {
-  /*overflow: auto; /* Prevent slides from overflowing */
-  width: 90%; /* Increased width */
-  margin: 0 auto; /* Center carousel on the page */
-  padding: 0px 0px; /* Increased padding to prevent clipping */
-}
-
-.slick-slide {
-  text-align: center; /* Center-align testimonials */
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 15px; /* Add some horizontal padding */
-  width: 100%; /* Increased width */
+  position: relative;
 }
 
 .testimonial {
-  border: 1px solid #ddd;
-  padding: 2rem; /* Increased padding */
-  border-radius: 20px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
   text-align: center;
-  margin: 1rem auto; /* Increased margin */
-  width: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-size: 1.1rem; /* Slightly larger text for better readability */
-  max-height: 350px; /* Increased height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial:hover {
-  transform: scale(1.01); /* Slight hover effect */
+  transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Testimonial Content */
 .testimonial p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
 }
 
 .testimonial span {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-weight: bold;
   color: #007bff;
-  font-size: 0.9rem;
 }
 
-/* Dots Navigation */
 .slick-dots {
-  display: block !important; /* Ensure dots are visible */
-  text-align: center; /* Center-align the dots */
-  margin-top: 1.5rem; /* Add some spacing above the dots */
+  margin-top: 2rem;
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 
 .slick-dots li {
-  display: inline-block; /* Ensure dots are in a line */
-  margin: 0 5px; /* Add some spacing between dots */
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .slick-dots li button {
-  background: #ddd; /* Default dot color */
-  width: 12px; /* Slightly larger dots */
+  width: 12px;
   height: 12px;
+  background: #ddd;
   border-radius: 50%;
   border: none;
 }
 
 .slick-dots li.slick-active button {
-  background: #007bff; /* Highlight active dot */
+  background: #007bff;
 }
 
 /* Form styles */

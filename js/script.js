@@ -49,19 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize Slick Carousel
   if ($(".testimonial-carousel").length) {
     console.log("Initializing the Slick carousel...");
-    $(".testimonial-carousel").slick({
-      infinite: true, // Enable infinite scrolling
-      slidesToShow: 1, // Show one testimonial at a time
-      slidesToScroll: 1, // Scroll one testimonial at a time
-      autoplay: true, // Enable autoplay
-      autoplaySpeed: 3000, // Set autoplay speed to 3 seconds
-      dots: true, // Enable dots navigation
-      arrows: false, // Disable arrows
-      draggable: true, // Allow mouse dragging
-      swipe: true, // Enable swipe for touch devices
-      touchThreshold: 10, // Adjust swipe sensitivity
-      adaptiveHeight: true, // Adjust height dynamically based on content
+    $(document).ready(function () {
+      $(".testimonial-carousel").slick({
+        dots: true, // Enable dots navigation
+        infinite: true, // Infinite scrolling
+        speed: 500, // Transition speed
+        slidesToShow: 1, // Show one slide at a time
+        slidesToScroll: 1, // Scroll one slide at a time
+        adaptiveHeight: true, // Adjust height based on content
+      });
     });
+    
   } else {
     console.warn("Slick carousel element not found!");
   }
