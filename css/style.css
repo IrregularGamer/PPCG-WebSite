@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
 /* General styles */
 body {
   font-family: "Roboto", Arial, sans-serif; /* Updated to a modern font */
@@ -9,6 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   line-height: 1.6; /* Improved readability */
+  overflow: auto; /* Restore default scrollbar behavior */
 }
 
 /* Header styles */
