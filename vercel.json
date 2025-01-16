@@ -4,6 +4,11 @@
       "source": "/ads.txt",
       "destination": "https://www.primperfection.org/ads.txt",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://www.primperfection.org",
+      "permanent": true
     }
   ]
 }
